@@ -2,6 +2,8 @@
  * We have to do a bit of work upfront to allow the tests
  * to run in the browser and in Node.js. 
  */
+console.log('test javascript file');
+
 let assert, expect;
 let testItems = {};
 
@@ -32,7 +34,61 @@ let primesCollection = [
     yearPublished: 2002
   },
 ];
+// ................................................................................................
+console.log('Primes Collection', primesCollection);
 
+let myCollection = [];
+console.log('Should be an empty array', myCollection);
+
+
+function addToCollection(collection, title, artist, yearPublished) {
+  const newAdditions = {
+      title: title,
+      artist: artist,
+      yearPublished: yearPublished
+  };
+collection.push(newAdditions);
+  return collection;
+}
+addToCollection(myCollection, 'After hours', 'The Weeknd', 2020 );
+console.log('Should have the Weeknd', myCollection)
+
+addToCollection(myCollection, 'Victory lap', 'Nipsey Hussle', 2018 );
+console.log('should have Nipsey Hussle added', myCollection);
+
+addToCollection(myCollection, 'More life', 'Drake', 2017 );
+console.log('should have Drake added', myCollection);
+
+addToCollection(myCollection, 'Waving flag', 'Knaan', 2009 );
+console.log('should have Knaan added', myCollection);
+
+addToCollection(myCollection, 'Graduation', 'Kanye', 2007 );
+console.log('should have Kanye added', myCollection);
+
+addToCollection(myCollection, 'On my grind', 'Tunji Ige', 2016 );
+console.log('should have Tunji Ige added', myCollection);
+// ................................................................................................
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ................................................................................................
 if (typeof window === 'object') {
     // Run tests in the browser
     assert = chai.assert;

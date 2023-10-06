@@ -48,7 +48,7 @@ function addToCollection(collection, title, artist, yearPublished) {
       yearPublished: yearPublished
   };
 collection.push(newAdditions);
-  return collection;
+  return newAdditions;
 }
 addToCollection(myCollection, 'After hours', 'The Weeknd', 2020 );
 console.log('Should have the Weeknd', myCollection)
@@ -69,7 +69,22 @@ addToCollection(myCollection, 'On my grind', 'Tunji Ige', 2016 );
 console.log('should have Tunji Ige added', myCollection);
 // ................................................................................................
 
-
+function showCollection(collection){
+  for(let items of collection ){
+ // console.log(items.title, 'by', items.artist, 'published in', items.yearPublished);
+    console.log(`${items.title} by ${items.artist}, published in ${items.yearPublished}`)
+  }
+}showCollection(myCollection);
+// ................................................................................................
+// let matchingAlbums = 0;
+// function findByArtist(collection, artist){
+// for(let albums of collection){
+//   if(albums.artist === artist){
+//     matchingAlbums.push(albums);
+//   }
+// }
+// return matchingAlbums;
+// }
 
 
 

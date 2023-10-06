@@ -85,6 +85,16 @@ function showCollection(collection){
 // }
 // return matchingAlbums;
 // }
+function findByArtist(collection, artist) {
+  let matchingAlbums = [];
+for (let album of collection) {
+      if (album.artist === artist) {
+          matchingAlbums.push(album);
+      }
+  }
+  return matchingAlbums;
+}
+console.log(findByArtist(myCollection));
 
 
 
